@@ -29,7 +29,7 @@ _i1.GetIt $initGetIt(
     environment,
     environmentFilter,
   );
-  gh.factory<_i3.ArticleRepository>(() => _i3.ArticleRepository());
+  gh.factory<_i3.ArticleRepository>(() => _i3.ArticleRepositoryImpl());
   gh.factory<_i4.FilteredArticlesBloc>(
       () => _i4.FilteredArticlesBloc(gh<_i3.ArticleRepository>()));
   gh.lazySingleton<_i5.LandscapeAppSizes>(() => _i5.LandscapeAppSizes());

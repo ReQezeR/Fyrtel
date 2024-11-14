@@ -1,9 +1,13 @@
 import 'package:fyrtel/src/features/article/domain/model/article_model.dart';
 import 'package:injectable/injectable.dart';
 
-@injectable
-class ArticleRepository {
-  ArticleRepository();
+abstract class ArticleRepository {
+  Future<List<Article>> loadArticles();
+}
+
+@Injectable(as: ArticleRepository)
+class ArticleRepositoryImpl extends ArticleRepository {
+  ArticleRepositoryImpl();
 
   Future<List<Article>> loadArticles() async {
     return const [
