@@ -4,7 +4,7 @@ import 'package:fyrtel/src/core/extensions/build_context.dart';
 import 'package:fyrtel/src/core/sizes/portrait_app_sizes.dart';
 import 'package:fyrtel/src/features/home/domain/home_scroll_controller.dart';
 import 'package:fyrtel/src/features/home/presentation/widgets/buttons/appbar_circle_button.dart';
-import 'package:fyrtel/src/features/home/presentation/widgets/appbar/appbar_title.dart';
+import 'package:fyrtel/src/features/home/presentation/widgets/appbar/portrait/appbar_title.dart';
 import 'package:fyrtel/src/features/home/presentation/widgets/background_video.dart';
 import 'package:fyrtel/src/shared/extensions/size_extensions.dart';
 

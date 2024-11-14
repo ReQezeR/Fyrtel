@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:fyrtel/src/core/extensions/build_context.dart';
 import 'package:fyrtel/src/core/sizes/landscape_app_sizes.dart';
-import 'package:fyrtel/src/features/home/presentation/widgets/background_video.dart';
+import 'package:fyrtel/src/features/home/presentation/widgets/appbar/landscape/landscape_appbar_side_menu.dart';
+import 'package:fyrtel/src/features/home/presentation/widgets/appbar/landscape/landscape_appbar_title.dart';
 import 'package:fyrtel/src/features/home/presentation/widgets/cards/action_home_card.dart';
 
 class LandscapeSliverHomeAppbar extends StatelessWidget {
@@ -29,11 +30,11 @@ class LandscapeSliverHomeAppbar extends StatelessWidget {
           child: Row(
             mainAxisSize: MainAxisSize.max,
             children: [
-              AppbarFlexibleTitle(
+              LandscapeAppbarTitle(
                 height: sizes.expandedAppbarHeight,
                 width: sizes.bodyWidth / 2,
               ),
-              AppbarFlexibleSideMenu(
+              LandscapeAppbarSideMenu(
                 height: sizes.expandedAppbarHeight,
                 width: sizes.bodyWidth / 2,
                 padding: sizes.horizontalPadding,
@@ -61,79 +62,6 @@ class LandscapeSliverHomeAppbar extends StatelessWidget {
               ),
             ],
           ),
-        ),
-      ),
-    );
-  }
-}
-
-class AppbarFlexibleTitle extends StatelessWidget {
-  const AppbarFlexibleTitle({
-    super.key,
-    required this.width,
-    required this.height,
-  });
-  final double width;
-  final double height;
-
-  @override
-  Widget build(BuildContext context) {
-    return SizedBox(
-      width: width,
-      height: height,
-      child: Stack(
-        fit: StackFit.expand,
-        children: [
-          const BackgroundVideo(),
-          Align(
-            alignment: Alignment.bottomCenter,
-            child: Container(
-              width: width / 2.3,
-              margin: const EdgeInsets.only(bottom: 40),
-              child: Image.asset(
-                "assets/images/logo_white.png",
-                color: Colors.white,
-              ),
-            ),
-          )
-        ],
-      ),
-    );
-  }
-}
-
-class AppbarFlexibleSideMenu extends StatelessWidget {
-  const AppbarFlexibleSideMenu({
-    super.key,
-    required this.width,
-    required this.height,
-    required this.padding,
-    required this.actions,
-  });
-  final double width;
-  final double height;
-  final EdgeInsets padding;
-  final List<ActionHomeCard> actions;
-
-  @override
-  Widget build(BuildContext context) {
-    return SafeArea(
-      child: Container(
-        width: width,
-        height: height,
-        padding: padding,
-        child: Column(
-          mainAxisSize: MainAxisSize.max,
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            ...actions.map(
-              (actionWidget) => SizedBox(
-                width: width - padding.horizontal,
-                height: (height - padding.horizontal) / actions.length,
-                child: actionWidget,
-              ),
-            )
-          ],
         ),
       ),
     );

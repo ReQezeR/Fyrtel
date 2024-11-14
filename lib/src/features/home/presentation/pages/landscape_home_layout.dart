@@ -7,7 +7,7 @@ import 'package:fyrtel/src/features/article/presentation/bloc/filtered_articles_
 import 'package:fyrtel/src/features/home/domain/home_scroll_controller.dart';
 import 'package:fyrtel/src/features/home/presentation/widgets/buttons/appbar_circle_button.dart';
 import 'package:fyrtel/src/features/home/presentation/widgets/cards/article_home_card.dart';
-import 'package:fyrtel/src/features/home/presentation/widgets/appbar/landscape_sliver_home_appbar.dart';
+import 'package:fyrtel/src/features/home/presentation/widgets/appbar/landscape/landscape_sliver_home_appbar.dart';
 import 'package:fyrtel/src/features/home/presentation/widgets/header/sliver_home_persistent_header.dart';
 import 'package:fyrtel/src/shared/extensions/size_extensions.dart';
 import 'package:fyrtel/src/shared/widgets/masonry_grid_item.dart';

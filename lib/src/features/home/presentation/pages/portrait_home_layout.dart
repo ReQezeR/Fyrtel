@@ -16,7 +16,7 @@ import 'package:fyrtel/src/shared/extensions/size_extensions.dart';
 import 'package:fyrtel/src/shared/widgets/loading_spinner.dart';
 import 'package:fyrtel/src/shared/widgets/masonry_grid_item.dart';
 import 'package:fyrtel/src/shared/widgets/masonry_grid_view.dart';
-import 'package:fyrtel/src/features/home/presentation/widgets/appbar/sliver_home_appbar.dart';
+import 'package:fyrtel/src/features/home/presentation/widgets/appbar/portrait/sliver_home_appbar.dart';
 
 class PortraitHomeLayout extends StatefulWidget {
   const PortraitHomeLayout({super.key});
