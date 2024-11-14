@@ -3,7 +3,7 @@ import 'package:get_it/get_it.dart';
 import 'package:injectable/injectable.dart';
 import 'injector.config.dart';
 
-final getIt = GetIt.instance;
+final locator = GetIt.instance;
 
 @InjectableInit(
   initializerName: r'$initGetIt', // default
@@ -11,5 +11,5 @@ final getIt = GetIt.instance;
   asExtension: false, // default
 )
 void configureDependencies({String environment = Env.prod}) {
-  $initGetIt(getIt, environment: environment);
+  $initGetIt(locator, environment: environment);
 }

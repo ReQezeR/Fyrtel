@@ -2,7 +2,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:fyrtel/src/core/config/size_config.dart';
 import 'package:fyrtel/src/core/sizes/app_sizes.dart';
-import 'package:fyrtel/src/di/injector.dart';
+import 'package:fyrtel/src/di/injectable.dart';
 import 'package:fyrtel/src/shared/extensions/size_extensions.dart';
 import 'package:injectable/injectable.dart';
 
@@ -26,7 +26,7 @@ class PortraitSizeFactor {
 
 @lazySingleton
 class PortraitAppSizes implements AppSizes {
-  SizeConfig get config => getIt<SizeConfig>();
+  SizeConfig get config => locator<SizeConfig>();
 
   @override
   double get colapsedAppbarHeight => 16.h - config.verticalPadding;

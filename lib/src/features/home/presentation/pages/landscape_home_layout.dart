@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fyrtel/src/core/sizes/landscape_app_sizes.dart';
-import 'package:fyrtel/src/di/injector.dart';
+import 'package:fyrtel/src/di/injectable.dart';
 import 'package:fyrtel/src/features/article/domain/model/article_model.dart';
-import 'package:fyrtel/src/features/article/presentation/filtered_articles/filtered_articles_bloc.dart';
+import 'package:fyrtel/src/features/article/presentation/bloc/filtered_articles_bloc.dart';
 import 'package:fyrtel/src/features/home/domain/home_scroll_controller.dart';
 import 'package:fyrtel/src/features/home/presentation/widgets/buttons/appbar_circle_button.dart';
 import 'package:fyrtel/src/features/home/presentation/widgets/cards/article_home_card.dart';
@@ -21,7 +21,7 @@ class LandscapeHomePage extends StatefulWidget {
 }
 
 class _LandscapeHomePageState extends State<LandscapeHomePage> {
-  final LandscapeAppSizes sizes = getIt<LandscapeAppSizes>();
+  final LandscapeAppSizes sizes = locator<LandscapeAppSizes>();
   late final HomeScrollController _controller = HomeScrollController.init(
     expandedAppbarHeight: sizes.expandedAppbarHeight,
     scrollExtent: sizes.scrollExtent,

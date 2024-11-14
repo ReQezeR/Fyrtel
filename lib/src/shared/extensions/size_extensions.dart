@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:fyrtel/src/core/config/size_config.dart';
-import 'package:fyrtel/src/di/injector.dart';
+import 'package:fyrtel/src/di/injectable.dart';
 
 extension SizeExt on num {
-  double get h => this * getIt<SizeConfig>().height / 100;
+  double get h => this * locator<SizeConfig>().height / 100;
 
-  double get w => this * getIt<SizeConfig>().width / 100;
+  double get w => this * locator<SizeConfig>().width / 100;
 
-  double get sh => this * getIt<SizeConfig>().safeHeight / 100;
-  double get sw => this * getIt<SizeConfig>().safeWidth / 100;
+  double get sh => this * locator<SizeConfig>().safeHeight / 100;
+  double get sw => this * locator<SizeConfig>().safeWidth / 100;
 
-  double get dp => this * (w * 160) / getIt<SizeConfig>().pixelRatio;
+  double get dp => this * (w * 160) / locator<SizeConfig>().pixelRatio;
 
-  double get scale => this * getIt<SizeConfig>().scale;
+  double get scale => this * locator<SizeConfig>().scale;
 }
 
 extension InsetsScaler on EdgeInsets {

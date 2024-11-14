@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:fyrtel/src/core/extensions/orientation.dart';
 import 'package:fyrtel/src/core/sizes/landscape_app_sizes.dart';
 import 'package:fyrtel/src/core/sizes/portrait_app_sizes.dart';
-import 'package:fyrtel/src/di/injector.dart';
+import 'package:fyrtel/src/di/injectable.dart';
 import 'package:fyrtel/src/shared/widgets/navigation/main_navigation_rail.dart';
 
 class NavigationWrapper extends StatefulWidget {
@@ -28,7 +28,7 @@ class _NavigationWrapperState extends State<NavigationWrapper> {
               child: widget.child,
             ),
             MainNavigationRail(
-              size: getIt<LandscapeAppSizes>().navigationSize,
+              size: locator<LandscapeAppSizes>().navigationSize,
             ),
           ],
         );
@@ -39,7 +39,7 @@ class _NavigationWrapperState extends State<NavigationWrapper> {
               child: widget.child,
             ),
             MainNavigationRail(
-              size: getIt<PortraitAppSizes>().navigationSize,
+              size: locator<PortraitAppSizes>().navigationSize,
             )
           ],
         );

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fyrtel/src/core/config/size_config.dart';
-import 'package:fyrtel/src/di/injector.dart';
+import 'package:fyrtel/src/di/injectable.dart';
 
 class SizeConfigWraper extends StatelessWidget {
   const SizeConfigWraper({super.key, required this.child});
@@ -9,7 +9,7 @@ class SizeConfigWraper extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return OrientationBuilder(builder: (context, orientation) {
-      getIt<SizeConfig>().initialize(context, orientation);
+      locator<SizeConfig>().initialize(context, orientation);
       return child;
     });
   }

@@ -15,7 +15,7 @@ import '../core/config/size_config.dart' as _i7;
 import '../core/sizes/landscape_app_sizes.dart' as _i5;
 import '../core/sizes/portrait_app_sizes.dart' as _i6;
 import '../features/article/domain/article_repository.dart' as _i3;
-import '../features/article/presentation/filtered_articles/filtered_articles_bloc.dart'
+import '../features/article/presentation/bloc/filtered_articles_bloc.dart'
     as _i4;
 
 // initializes the registration of main-scope dependencies inside of GetIt

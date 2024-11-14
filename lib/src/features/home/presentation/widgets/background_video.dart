@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:fyrtel/src/core/extensions/build_context.dart';
 import 'package:fyrtel/src/core/extensions/orientation.dart';
 import 'package:fyrtel/src/core/sizes/landscape_app_sizes.dart';
-import 'package:fyrtel/src/di/injector.dart';
+import 'package:fyrtel/src/di/injectable.dart';
 import 'package:fyrtel/src/shared/widgets/loading_spinner.dart';
 import 'package:video_player/video_player.dart';
 
@@ -63,7 +63,7 @@ class _BackgroundVideoState extends State<BackgroundVideo> {
     }
 
     if (isLandscape) {
-      LandscapeAppSizes sizes = getIt<LandscapeAppSizes>();
+      LandscapeAppSizes sizes = locator<LandscapeAppSizes>();
       double backgroundWidth = sizes.bodyWidth / 2;
       double backgroudHeight = sizes.expandedAppbarHeight;
 

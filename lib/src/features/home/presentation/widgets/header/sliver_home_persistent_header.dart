@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fyrtel/src/core/extensions/build_context.dart';
 import 'package:fyrtel/src/core/sizes/portrait_app_sizes.dart';
-import 'package:fyrtel/src/features/article/presentation/filtered_articles/filtered_articles_bloc.dart';
+import 'package:fyrtel/src/features/article/presentation/bloc/filtered_articles_bloc.dart';
 import 'package:fyrtel/src/features/home/domain/home_scroll_controller.dart';
 import 'package:fyrtel/src/features/home/presentation/widgets/buttons/filter_chip_button.dart';
 import 'package:fyrtel/src/features/home/presentation/widgets/buttons/half_circle_button.dart';

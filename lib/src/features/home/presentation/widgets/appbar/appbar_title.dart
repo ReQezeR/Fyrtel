@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fyrtel/src/core/extensions/build_context.dart';
 import 'package:fyrtel/src/core/sizes/portrait_app_sizes.dart';
-import 'package:fyrtel/src/di/injector.dart';
+import 'package:fyrtel/src/di/injectable.dart';
 import 'package:fyrtel/src/features/home/domain/home_scroll_controller.dart';
 import 'package:fyrtel/src/core/extensions/double.dart';
 import 'package:fyrtel/src/shared/extensions/size_extensions.dart';
@@ -39,7 +39,7 @@ class AppbarTitle extends StatelessWidget {
         child: Container(
           margin: _getMargin(),
           width: 28.w,
-          height: getIt<PortraitAppSizes>().colapsedAppbarHeight,
+          height: locator<PortraitAppSizes>().colapsedAppbarHeight,
           child: Padding(
             padding: EdgeInsets.only(left: leftPadding, right: rightPadding),
             child: Stack(
