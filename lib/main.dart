@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:fyrtel/src/core/theme/app_theme.dart';
 import 'package:fyrtel/src/di/injector.dart';
 import 'package:fyrtel/src/features/home/presentation/pages/home_page.dart';
-import 'package:fyrtel/src/shared/widgets/navigation_wrapper.dart';
+import 'package:fyrtel/src/shared/widgets/navigation/navigation_wrapper.dart';
 import 'package:fyrtel/src/shared/widgets/size_config_wrapper.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
