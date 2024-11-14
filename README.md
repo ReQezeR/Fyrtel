@@ -10,7 +10,7 @@ Application layouts
 <img src="docs/portraitHomePage.png" height="600">
 
 *  Home page - landscape,
-<img src="docs/landscapeHomePage.png" height="600">
+<img src="docs/landscapeHomePage.png" height="300">
 
 ## Tools
 * Dart 3.4.3
