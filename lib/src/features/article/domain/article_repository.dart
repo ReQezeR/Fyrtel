@@ -9,6 +9,7 @@ abstract class ArticleRepository {
 class ArticleRepositoryImpl extends ArticleRepository {
   ArticleRepositoryImpl();
 
+  @override
   Future<List<Article>> loadArticles() async {
     return const [
       Article(
