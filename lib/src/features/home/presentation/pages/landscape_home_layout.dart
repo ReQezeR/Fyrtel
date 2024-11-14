@@ -5,11 +5,10 @@ import 'package:fyrtel/src/di/injectable.dart';
 import 'package:fyrtel/src/features/article/domain/model/article_model.dart';
 import 'package:fyrtel/src/features/article/presentation/bloc/filtered_articles_bloc.dart';
 import 'package:fyrtel/src/features/home/domain/home_scroll_controller.dart';
-import 'package:fyrtel/src/features/home/presentation/widgets/buttons/appbar_circle_button.dart';
 import 'package:fyrtel/src/features/home/presentation/widgets/cards/article_home_card.dart';
 import 'package:fyrtel/src/features/home/presentation/widgets/appbar/landscape/landscape_sliver_home_appbar.dart';
 import 'package:fyrtel/src/features/home/presentation/widgets/header/sliver_home_persistent_header.dart';
-import 'package:fyrtel/src/shared/extensions/size_extensions.dart';
+import 'package:fyrtel/src/features/home/presentation/widgets/landscape_side_buttons.dart';
 import 'package:fyrtel/src/shared/widgets/masonry_grid_item.dart';
 import 'package:fyrtel/src/shared/widgets/masonry_grid_view.dart';
 
@@ -46,6 +45,15 @@ class _LandscapeHomePageState extends State<LandscapeHomePage> {
     _controller.dispose();
     super.dispose();
   }
+
+  MasonryGridItem mapArticle(Article a) => MasonryGridItem(
+        key: ValueKey(a.name.toString()),
+        child: ArticleHomeCard(
+          article: a,
+          padding: EdgeInsets.all(sizes.gridSpacing),
+          onTap: () {},
+        ),
+      );
 
   @override
   Widget build(BuildContext context) {
@@ -92,55 +100,8 @@ class _LandscapeHomePageState extends State<LandscapeHomePage> {
             ),
           ],
         ),
-        SafeArea(
-          child: Align(
-            alignment: Alignment.topLeft,
-            child: SizedBox(
-              width: 45.h,
-              height: sizes.headerHeight,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  AppbarCircleButton(
-                    icon: Icons.menu,
-                    semiTransparent: false,
-                    onPressed: () {},
-                    margin: EdgeInsets.only(left: 2.h),
-                    height: sizes.headerHeight / 2,
-                    radius: 10.h,
-                  ),
-                  AppbarCircleButton(
-                    icon: Icons.favorite_border,
-                    semiTransparent: false,
-                    onPressed: () {},
-                    margin: EdgeInsets.only(left: 2.h),
-                    height: sizes.headerHeight / 2,
-                    radius: 10.h,
-                  ),
-                  AppbarCircleButton(
-                    icon: Icons.search,
-                    semiTransparent: false,
-                    onPressed: () {},
-                    margin: EdgeInsets.only(left: 2.h),
-                    height: sizes.headerHeight / 2,
-                    radius: 10.h,
-                  ),
-                ],
-              ),
-            ),
-          ),
-        ),
+        Align(alignment: Alignment.topLeft, child: LandscapeSideButtons()),
       ],
     );
   }
-
-  MasonryGridItem mapArticle(Article a) => MasonryGridItem(
-        key: ValueKey(a.name.toString()),
-        child: ArticleHomeCard(
-          article: a,
-          padding: EdgeInsets.all(sizes.gridSpacing),
-          onTap: () {},
-        ),
-      );
 }

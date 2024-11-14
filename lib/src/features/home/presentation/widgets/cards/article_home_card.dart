@@ -40,7 +40,7 @@ class _ArticleHomeCardState extends State<ArticleHomeCard> {
           child: BlocBuilder<FavouriteArticleCubit, FavouriteArticleState>(
             builder: (context, state) {
               return HomeCardWrapper(
-                onTap: widget.onTap, //TODO open article page
+                onTap: widget.onTap,
                 backgroundColor: colors.surface,
                 splashColor: colors.onSurface,
                 highlightColor: colors.onSurface,
