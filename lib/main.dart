@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-// import 'package:flutter/services.dart';
+import 'package:flutter/services.dart';
 import 'package:fyrtel/src/core/theme/app_theme.dart';
 import 'package:fyrtel/src/di/injectable.dart';
 import 'package:fyrtel/src/features/home/presentation/pages/home_page.dart';
@@ -9,7 +9,7 @@ import 'package:hive_flutter/hive_flutter.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  // SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
+  SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
   configureDependencies();
   await Hive.initFlutter();
   await Hive.openBox<bool>('favoritesBox');

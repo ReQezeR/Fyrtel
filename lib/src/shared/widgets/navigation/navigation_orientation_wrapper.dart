@@ -2,8 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:fyrtel/src/shared/extensions/size_extensions.dart';
 
 class NavigationOrientationWrapper extends StatelessWidget {
-  const NavigationOrientationWrapper(
-      {super.key, required this.children, required this.size});
+  const NavigationOrientationWrapper({
+    super.key,
+    required this.children,
+    required this.size,
+  });
   final List<Widget> children;
   final double size;
 
