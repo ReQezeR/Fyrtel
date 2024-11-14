@@ -1,7 +1,7 @@
 import 'package:fyrtel/src/core/const/_index.dart';
 import 'package:get_it/get_it.dart';
 import 'package:injectable/injectable.dart';
-import 'injector.config.dart';
+import 'injectable.config.dart';
 
 final locator = GetIt.instance;
 
