@@ -51,3 +51,7 @@ Application layouts
 
 ## Author
 **Michał Popiel** - [ReQezeR](https://github.com/ReQezeR)
+
+## Design
+**Pro Multimedia** - [Website](https://pro-multimedia.com.pl/)
+
